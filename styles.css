@@ -234,9 +234,9 @@ footer {
     footer { font-size: 13px; padding: 10px; }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     header { padding: 8px; }
-    .logo { width: 60px; height: 45px; }
+    .logo { width: 50px; height: 355px; }
     header h1 { font-size: 12px; }
     .map-button {width: 58px; font-size: 5px; padding: 7px; margin-right: 2px; }
     #searchBar { width: 75px; font-size: 7px; padding: 6px; }
