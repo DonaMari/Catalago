@@ -216,12 +216,20 @@ footer {
 }
 
 @media (max-width: 768px) {
-    header {
-        flex-wrap: wrap;
-    }
 
     .producto {
-        width: clamp(100px, 35vw, 200px);
+        width: 100%;
+        max-width: 200px;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 22px;
     }
 
     .logo {
@@ -229,20 +237,72 @@ footer {
         height: 80px;
     }
 
+    .map-button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
     #searchBar {
         width: 90%;
     }
 
-    
-    .map-button {
-        font-size: 14px;
-        padding: 8px 12px;
+    nav ul {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea si no caben */
+        justify-content: center; /* Centra los elementos en la nueva fila */
+        padding: 0;
+        gap: 10px; /* Espacio entre los elementos */
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 8px;
     }
 }
 
-/* Para celulares MUY alargados */
-@media (max-aspect-ratio: 9/19) {
+/* Ajuste para que en celulares pequeños todo se encoja proporcionalmente */
+@media (max-width: 480px) {
+    body {
+        transform: scale(0.8);
+        transform-origin: top center;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    .logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .map-button {
+        font-size: 11px;
+        padding: 5px 8px;
+    }
+
+    #searchBar {
+        width: 85%;
+        font-size: 14px;
+    }
+
     .producto {
-        width: clamp(120px, 40vw, 180px);
+        max-width: 300px;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .producto h3 {
+        font-size: 16px;
+    }
+
+    .precio {
+        font-size: 16px;
+    }
+
+    .whatsapp-producto {
+        font-size: 12px;
+        padding: 8px 12px;
     }
 }
