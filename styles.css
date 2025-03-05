@@ -220,16 +220,31 @@ footer {
         flex-wrap: wrap;
     }
 
+    .producto {
+        width: clamp(100px, 35vw, 200px);
+    }
+
+        header h1 {
+        font-size: 22px;
+    }
+
     .logo {
-        width: 15vw;
+        width: 100px;
+        height: 80px;
     }
 
     #searchBar {
-        width: 25vw;
+        width: 90%;
     }
 
-    .producto {
-        width: clamp(100px, 35vw, 200px);
+    nav ul li {
+        display: block;
+        margin-bottom: 8px;
+    }
+    
+    .map-button {
+        font-size: 14px;
+        padding: 8px 12px;
     }
 }
 
