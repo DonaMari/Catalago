@@ -227,7 +227,7 @@ footer {
     nav ul li a {font-size: 7px;}    
     .categoria { width: 95%; padding: 6px; }
     .producto { width: 100px; padding: 7px; margin: 5px; }
-    .categoria h2 {font-size: 17px; /* Ajusta el tamaño según lo necesites */}
+    .categoria h2 {font-size: 25px; /* Ajusta el tamaño según lo necesites */}
     .producto h3 { font-size: 11px; }
     .producto p { font-size: 10px; }
     .precio { font-size: 11px; }
