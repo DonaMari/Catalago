@@ -1,0 +1,247 @@
+/* Importar fuente moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #004d40;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    position: relative;
+}
+
+/* Logo */
+.logo {
+    width: 110px;
+    height: 90px;
+    border-radius: 10%;
+    object-fit: cover;
+}
+
+/* Título */
+header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Botón de ubicación en Google Maps */
+.map-button {
+    padding: 10px ;
+    background-color: #3dff3397;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-left: 1px;
+    margin-right: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.map-button:hover {
+    background-color: #d84315;
+}
+
+/* Barra de búsqueda */
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+#searchBar {
+    width: 185px;
+    padding: 10px;
+    border: 2px solid #00796b;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Navegación */
+nav {
+    background-color: #00796b;
+    padding: 12px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #c0fdfb;
+}
+
+/* Secciones */
+.categoria {
+    margin: 30px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.categoria h2 {
+    color: #00796b;
+    border-bottom: 3px solid #00796b;
+    padding-bottom: 8px;
+    font-size: 22px;
+}
+
+/* Productos */
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.producto {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.producto img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.producto h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.producto p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.precio {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #00796b;
+    margin-bottom: 10px;
+}
+
+/* Botón de WhatsApp */
+.whatsapp-producto {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+}
+
+.whatsapp-producto:hover {
+    background-color: #1EBE57;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #004d40;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .search-container {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .producto {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    #searchBar {
+        width: 90%;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .map-button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
