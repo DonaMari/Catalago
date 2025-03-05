@@ -200,85 +200,90 @@ footer {
 }
 
 /* Responsividad */
-@media (max-width: 1024px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    header h1 {
-        font-size: 24px;
-        margin-bottom: 10px;
-    }
-
-    .search-container {
-        margin-top: 10px;
-    }
-}
-
 @media (max-width: 768px) {
-    .productos {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3 productos por fila */
-        gap: 10px;
+    body {
+        font-size: 14px; /* Reduce ligeramente el tamaño de fuente */
     }
 
-    .producto {
-        width: 100%;
-        max-width: 200px; /* Tamaño más compacto */
-    }
-
-    header h1 {
-        font-size: 20px;
-    }
-
-    .logo {
-        width: 70px;
-        height: 70px;
-    }
-
-    #searchBar {
-        width: 80%;
-    }
-
-    nav ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 0;
-    }
-
-    nav ul li {
-        display: block;
-        margin-bottom: 5px;
-    }
-
-    .map-button {
-        font-size: 13px;
-        padding: 8px 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .productos {
-        grid-template-columns: repeat(2, 1fr); /* 2 productos por fila */
-    }
-
-    .producto {
-        max-width: 170px;
+    header {
+        flex-direction: row; /* Mantiene el diseño en línea */
+        justify-content: space-between;
+        padding: 10px;
     }
 
     header h1 {
-        font-size: 18px;
+        font-size: 20px; /* Reduce el título */
+        flex-grow: unset; 
+        text-align: left;
     }
 
     .logo {
-        width: 60px;
+        width: 70px; /* Reduce el tamaño del logo */
         height: 60px;
     }
 
+    .search-container {
+        flex-direction: row;
+        justify-content: center;
+        width: auto;
+    }
+
     #searchBar {
-        width: 90%;
+        width: 150px; /* Reduce la barra de búsqueda */
+        padding: 8px;
+    }
+
+    .map-button {
+        font-size: 12px;
+        padding: 6px 10px; /* Reduce el botón */
+        margin-right: 5px;
+    }
+
+    nav ul li {
+        display: inline-block; /* Mantiene la navegación en línea */
+        margin: 0 10px;
+    }
+
+    .categoria {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .productos {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .producto {
+        width: 90%; /* Reduce el tamaño de los productos */
+        max-width: 300px;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .producto img {
+        border-radius: 8px;
+    }
+
+    .producto h3 {
+        font-size: 16px;
+    }
+
+    .precio {
+        font-size: 16px;
+    }
+
+    .whatsapp-producto {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
+
     }
 }
 
