@@ -202,88 +202,39 @@ footer {
 /* Responsividad */
 @media (max-width: 768px) {
     body {
-        font-size: 14px; /* Reduce ligeramente el tamaño de fuente */
+        zoom: 0.8; /* Reduce el tamaño del contenido en móviles */
     }
 
-    header {
-        flex-direction: row; /* Mantiene el diseño en línea */
-        justify-content: space-between;
-        padding: 10px;
+    header, nav, .categoria, .productos {
+        width: 100%;
+        max-width: 1200px;
     }
 
-    header h1 {
-        font-size: 20px; /* Reduce el título */
-        flex-grow: unset; 
-        text-align: left;
-    }
-
-    .logo {
-        width: 70px; /* Reduce el tamaño del logo */
-        height: 60px;
-    }
-
-    .search-container {
-        flex-direction: row;
-        justify-content: center;
-        width: auto;
-    }
-
-    #searchBar {
-        width: 150px; /* Reduce la barra de búsqueda */
-        padding: 8px;
-    }
-
-    .map-button {
-        font-size: 12px;
-        padding: 6px 10px; /* Reduce el botón */
-        margin-right: 5px;
-    }
-
-    nav ul li {
-        display: inline-block; /* Mantiene la navegación en línea */
-        margin: 0 10px;
-    }
-
-    .categoria {
-        width: 95%;
-        padding: 15px;
-    }
-
-    .productos {
-        flex-wrap: wrap;
-        justify-content: center;
+    .search-container, .map-button {
+        flex-wrap: nowrap;
     }
 
     .producto {
-        width: 90%; /* Reduce el tamaño de los productos */
-        max-width: 300px;
-        margin: 10px;
-        padding: 10px;
+        max-width: 250px; /* Mantiene el tamaño de los productos */
     }
 
-    .producto img {
-        border-radius: 8px;
+    #searchBar {
+        width: 185px;
     }
 
-    .producto h3 {
-        font-size: 16px;
+    .logo {
+        width: 110px;
+        height: 90px;
     }
 
-    .precio {
-        font-size: 16px;
+    nav ul {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
     }
 
-    .whatsapp-producto {
-        font-size: 12px;
-        padding: 8px 12px;
-    }
-
-    footer {
-        font-size: 12px;
-        padding: 10px;
+    nav ul li {
+        display: inline;
+        margin: 0 10px;
     }
 }
-
-    }
-}
-
