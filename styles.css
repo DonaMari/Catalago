@@ -215,26 +215,8 @@ footer {
     }
 }
 
-@media (max-width: 760px) {
-    header { padding: 12px; }
-    .logo { width: 80px; height: 65px; }
-    header h1 { font-size: 18px; }
-    .map-button { width: 80px; font-size: 10px; padding: 8px; margin-right: 5px; }
-    #searchBar { width: 130px; font-size: 12px; padding: 8px; }
-    nav { padding: 6px; }
-    nav ul li { margin: 0 10px; }
-    nav ul li a { font-size: 12px; }    
-    .categoria { width: 90%; padding: 12px; }
-    .producto { width: 160px; padding: 10px; margin: 8px; }
-    .categoria h2 { font-size: 20px; }
-    .producto h3 { font-size: 14px; }
-    .producto p { font-size: 12px; }
-    .precio { font-size: 14px; }
-    .whatsapp-producto { font-size: 10px; padding: 8px; }
-    footer { font-size: 13px; padding: 10px; }
-}
 
-@media (max-width: 600px) {
+@media (max-width: 760px) {
     header { padding: 8px; }
     .logo { width: 50px; height: 35px; }
     header h1 { font-size: 12px; }
