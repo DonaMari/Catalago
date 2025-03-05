@@ -21,38 +21,36 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 20px;
-    position: relative;
-    flex-wrap: wrap; /* Para que no se apilen en móvil */
+    padding: 2vw; /* Se ajusta según el tamaño de la pantalla */
 }
 
 /* Logo */
 .logo {
-    width: 110px;
-    height: 90px;
+    width: 10vw; /* Escala proporcionalmente */
+    height: auto;
+    max-height: 10vh; /* No se distorsiona */
     border-radius: 10%;
     object-fit: cover;
 }
 
 /* Título */
 header h1 {
-    font-size: 28px;
+    font-size: clamp(16px, 4vw, 28px); /* Se ajusta automáticamente */
     font-weight: 600;
     flex-grow: 1;
     text-align: center;
 }
 
-/* Botón de ubicación en Google Maps */
+/* Botón de ubicación */
 .map-button {
-    padding: 10px;
+    padding: 1.5vw;
     background-color: #3dff3397;
     color: white;
     text-decoration: none;
-    font-size: 13px;
+    font-size: clamp(10px, 2vw, 16px);
     font-weight: bold;
     border-radius: 5px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 1vw;
     transition: background-color 0.3s ease;
 }
 
@@ -67,22 +65,19 @@ header h1 {
 }
 
 #searchBar {
-    width: 185px;
-    padding: 10px;
+    width: 20vw;
+    padding: 1vw;
     border: 2px solid #00796b;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: clamp(12px, 2vw, 16px);
     outline: none;
 }
 
 /* Navegación */
 nav {
     background-color: #00796b;
-    padding: 12px;
+    padding: 1.5vw;
     text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 
 nav ul {
@@ -90,18 +85,17 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Para evitar que en móvil se vea vertical */
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 1vw;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: clamp(12px, 2vw, 16px);
     font-weight: bold;
     transition: color 0.3s ease;
 }
@@ -112,8 +106,8 @@ nav ul li a:hover {
 
 /* Secciones */
 .categoria {
-    margin: 30px auto;
-    padding: 20px;
+    margin: 3vw auto;
+    padding: 3vw;
     width: 90%;
     max-width: 1200px;
     background: white;
@@ -124,8 +118,8 @@ nav ul li a:hover {
 .categoria h2 {
     color: #00796b;
     border-bottom: 3px solid #00796b;
-    padding-bottom: 8px;
-    font-size: 22px;
+    padding-bottom: 1vw;
+    font-size: clamp(16px, 2.5vw, 22px);
 }
 
 /* Productos */
@@ -133,14 +127,15 @@ nav ul li a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 2vw;
 }
 
 .producto {
     background: white;
     border-radius: 10px;
-    padding: 15px;
-    margin: 15px;
-    width: 250px;
+    padding: 2vw;
+    margin: 2vw;
+    width: clamp(150px, 25vw, 250px);
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -153,27 +148,28 @@ nav ul li a:hover {
 
 .producto img {
     width: 100%;
+    max-width: 20vw; /* Ajusta según el tamaño de la pantalla */
     border-radius: 10px;
 }
 
 .producto h3 {
-    font-size: 18px;
+    font-size: clamp(14px, 2.2vw, 18px);
     color: #333;
-    margin: 10px 0;
+    margin: 1vw 0;
 }
 
 .producto p {
-    font-size: 14px;
+    font-size: clamp(12px, 1.8vw, 14px);
     color: #666;
-    margin-bottom: 10px;
+    margin-bottom: 1vw;
 }
 
 .precio {
     display: block;
-    font-size: 18px;
+    font-size: clamp(14px, 2.2vw, 18px);
     font-weight: bold;
     color: #00796b;
-    margin-bottom: 10px;
+    margin-bottom: 1vw;
 }
 
 /* Botón de WhatsApp */
@@ -181,12 +177,12 @@ nav ul li a:hover {
     display: inline-block;
     background-color: #25D366;
     color: white;
-    padding: 10px 15px;
+    padding: 1vw 2vw;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s ease;
-    font-size: 14px;
+    font-size: clamp(12px, 1.8vw, 14px);
 }
 
 .whatsapp-producto:hover {
@@ -198,64 +194,42 @@ footer {
     text-align: center;
     background-color: #004d40;
     color: white;
-    padding: 15px;
-    margin-top: 20px;
-    font-size: 14px;
+    padding: 2vw;
+    font-size: clamp(12px, 1.8vw, 14px);
 }
 
-/* Responsividad */
+/* RESPONSIVIDAD */
 @media (max-width: 1024px) {
-    header {
-        flex-wrap: nowrap; /* Evita que los elementos se apilen */
+    .logo {
+        width: 12vw;
     }
 
-    header h1 {
-        font-size: 24px;
-    }
-
-    .search-container {
-        margin-top: 10px;
+    .producto {
+        width: clamp(120px, 30vw, 220px);
     }
 }
 
 @media (max-width: 768px) {
-    .producto {
-        width: 250px; /* Mantiene el mismo tamaño en móviles */
-    }
-
-    header h1 {
-        font-size: 22px;
+    header {
+        flex-wrap: wrap;
     }
 
     .logo {
-        width: 80px;
-        height: 80px;
+        width: 15vw;
     }
 
     #searchBar {
-        width: 185px; /* Evita que se expanda a todo el ancho */
+        width: 25vw;
     }
 
-    nav ul {
-        flex-wrap: nowrap; /* Mantiene el menú horizontal */
-    }
-
-    .map-button {
-        font-size: 14px;
-        padding: 8px 12px;
+    .producto {
+        width: clamp(100px, 35vw, 200px);
     }
 }
 
-@media (max-width: 480px) {
+/* Para celulares MUY alargados */
+@media (max-aspect-ratio: 9/19) {
     .producto {
-        width: 250px; /* Mantiene el mismo tamaño en móviles pequeños */
-    }
-
-    header {
-        flex-wrap: nowrap;
-    }
-
-    nav ul {
-        flex-wrap: nowrap;
+        width: clamp(120px, 40vw, 180px);
     }
 }
