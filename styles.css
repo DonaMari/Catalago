@@ -23,6 +23,7 @@ header {
     justify-content: space-between;
     padding: 15px 20px;
     position: relative;
+    flex-wrap: wrap; /* Para que no se apilen en móvil */
 }
 
 /* Logo */
@@ -43,15 +44,15 @@ header h1 {
 
 /* Botón de ubicación en Google Maps */
 .map-button {
-    padding: 10px ;
+    padding: 10px;
     background-color: #3dff3397;
     color: white;
     text-decoration: none;
     font-size: 13px;
     font-weight: bold;
     border-radius: 5px;
-    margin-left: 1px;
-    margin-right: 8px;
+    margin-left: 10px;
+    margin-right: 10px;
     transition: background-color 0.3s ease;
 }
 
@@ -87,6 +88,9 @@ nav {
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Para evitar que en móvil se vea vertical */
 }
 
 nav ul li {
@@ -200,41 +204,58 @@ footer {
 }
 
 /* Responsividad */
+@media (max-width: 1024px) {
+    header {
+        flex-wrap: nowrap; /* Evita que los elementos se apilen */
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .search-container {
+        margin-top: 10px;
+    }
+}
+
 @media (max-width: 768px) {
-    body {
-        zoom: 0.8; /* Reduce el tamaño del contenido en móviles */
-    }
-
-    header, nav, .categoria, .productos {
-        width: 100%;
-        max-width: 1200px;
-    }
-
-    .search-container, .map-button {
-        flex-wrap: nowrap;
-    }
-
     .producto {
-        max-width: 250px; /* Mantiene el tamaño de los productos */
+        width: 250px; /* Mantiene el mismo tamaño en móviles */
     }
 
-    #searchBar {
-        width: 185px;
+    header h1 {
+        font-size: 22px;
     }
 
     .logo {
-        width: 110px;
-        height: 90px;
+        width: 80px;
+        height: 80px;
+    }
+
+    #searchBar {
+        width: 185px; /* Evita que se expanda a todo el ancho */
     }
 
     nav ul {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: center;
+        flex-wrap: nowrap; /* Mantiene el menú horizontal */
     }
 
-    nav ul li {
-        display: inline;
-        margin: 0 10px;
+    .map-button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .producto {
+        width: 250px; /* Mantiene el mismo tamaño en móviles pequeños */
+    }
+
+    header {
+        flex-wrap: nowrap;
+    }
+
+    nav ul {
+        flex-wrap: nowrap;
     }
 }
