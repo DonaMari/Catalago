@@ -198,25 +198,8 @@ footer {
     font-size: 14px;
 }
 
-/* RESPONSIVE: Ajuste para que todo se reduzca proporcionalmente en celulares */
+
 @media (max-width: 1024px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    header h1 {
-        font-size: 24px;
-        margin-bottom: 10px;
-    }
-
-    .search-container {
-        margin-top: 10px;
-    }
-}
-
-
-@media (max-width: 760px) {
     header { padding: 8px; }
     .logo { width: 50px; height: 35px; }
     header h1 { font-size: 12px; }
